@@ -69,3 +69,9 @@ INSERT INTO detalle_pedidos (id_pedido, id_producto, cantidad, precio_unitario) 
 
     -- pedido 3: María quiere 1 zapatillas Asics
     (3, 3, 1, 49990);
+
+
+-- ajusto el stock de algunos productos para simular stock bajo
+UPDATE stock SET cantidad = 2 WHERE id_producto = 1;  -- Raqueta Wilson: 2 < mínimo 3
+UPDATE stock SET cantidad = 4 WHERE id_producto = 9;  -- Camiseta Ellesse: 4 < mínimo 5
+UPDATE stock SET cantidad = 3 WHERE id_producto = 3;  -- Zapatillas Asics: 3 < mínimo 5
